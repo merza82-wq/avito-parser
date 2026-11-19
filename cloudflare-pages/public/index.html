@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#ffffff">
+  <title>Диалоги Авито</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <main class="app" id="app" data-view="list">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span>Диалоги Авито</span></div>
+      <span class="connection" id="connection" role="status">Подключение</span>
+    </header>
+    <div class="workspace">
+      <aside class="sidebar" aria-label="Список диалогов">
+        <div class="sidebar-head">
+          <h1>Диалоги</h1>
+          <div class="search"><label class="sr-only" for="search">Поиск диалогов</label><span aria-hidden="true"></span><input type="search" id="search" placeholder="Поиск по имени или сообщению" autocomplete="off"></div>
+          <label class="profile-filter" id="profile-filter" hidden><span class="sr-only">Профиль Авито</span><select id="profile"><option value="">Все профили</option></select></label>
+        </div>
+        <div id="dialogs" class="dialog-list" aria-label="Переписки"></div>
+      </aside>
+      <section class="thread" aria-label="История переписки">
+        <header class="thread-head" id="thread-head" hidden>
+          <button class="button back" id="back" type="button">Диалоги</button>
+          <div id="thread-avatar" class="avatar" aria-hidden="true"></div>
+          <div class="thread-identity"><h2 id="thread-title"></h2><p id="thread-profile"></p></div>
+        </header>
+        <div class="thread-scroll" id="thread-scroll" tabindex="0" aria-label="Сообщения">
+          <div id="thread-content" class="thread-content"></div>
+        </div>
+        <footer class="thread-foot" id="thread-foot" hidden><span>Ответы доступны в чате с ботом</span></footer>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
